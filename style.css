@@ -49,9 +49,9 @@ div.content {
 }
 
 ::-webkit-scrollbar-thumb {
-	background: #888;
+	background: #fb1004;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background: #555;
+	background: #e20f03;
 }
