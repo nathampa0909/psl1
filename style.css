@@ -1,9 +1,5 @@
 body {
-	background: #66CD00;
-	background: -webkit-linear-gradient(to left, #66CD00 , #a3e166);
-	background: linear-gradient(to left, #66CD00 , #a3e166);
-	font-family: Fradm, Tahoma;
-	color: #FFF;
+	background: #333;
 }
 
 .sidebar 	{
