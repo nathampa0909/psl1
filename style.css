@@ -1,0 +1,57 @@
+body {
+	background: #66CD00;
+	background: -webkit-linear-gradient(to left, #66CD00 , #a3e166);
+	background: linear-gradient(to left, #66CD00 , #a3e166);
+	font-family: Fradm, Tahoma;
+	color: #FFF;
+}
+
+.sidebar 	{
+	margin: 0;
+	padding: 0;
+	width: 200px;
+	background-color: #f1f1f1;
+	position: fixed;
+	height: 98%;
+	overflow: auto;
+}
+
+.sidebar a {
+	display: block;
+	color: black;
+	padding: 16px;
+	text-decoration: none;
+}
+
+.sidebar a.active {
+	background-color: #4CAF50;
+	color: white;
+}
+
+.sidebar a:hover:not(.active) {
+	background-color: #555;
+	color: white;
+	transition: 0.3s;
+}
+
+div.content {
+	margin-left: 205px;
+	padding: 10px 16px;
+	background: #333;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
