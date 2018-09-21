@@ -1,10 +1,12 @@
 body {
-	background: #0000;
+	background: #000;
 }
 
 .sidebar 	{
 	margin: 0;
 	padding: 0;
+	left: 0;
+	top: 0;
 	width: 200px;
 	background-color: #f1f1f1;
 	position: fixed;
@@ -31,7 +33,7 @@ body {
 }
 
 div.content {
-	margin-left: 205px;
+	margin-left: 200px;
 	padding: 10px 16px;
 	background: #333;
 }
