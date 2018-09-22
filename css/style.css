@@ -1,7 +1,6 @@
 body {
-	background: #000;
+	background: url("/img/background.jpg");
 	font-family: Fradm, Tahoma;
-	color: #FFF;
 }
 
 .sidebar 	{
@@ -24,12 +23,12 @@ body {
 }
 
 .sidebar a.active {
-	background-color: #4CAF50;
+	background-color: #fb1004;
 	color: white;
 }
 
 .sidebar a:hover:not(.active) {
-	background-color: #555;
+	background-color: #e20f03;
 	color: white;
 	transition: 0.3s;
 }
@@ -37,7 +36,10 @@ body {
 div.content {
 	margin-left: 200px;
 	padding: 10px 16px;
-	background: #333;
+	filter:alpha(opacity=10);
+	opacity: 0.1;
+	-moz-opacity:0.1;
+	-webkit-opacity:0.1;
 }
 
 ::-webkit-scrollbar {
@@ -63,11 +65,22 @@ div.content {
 		height: auto;
 		position: relative;
 	}
+
 	.sidebar a {
 		float: left;
 	}
+
 	div.content {
 		margin-left: 0;
 	}
+
+	div.home {
+		display: none;
+		background: #000;
+	}
 }
+
+img {
+	max-width:100%;
+	height:auto;
 }
