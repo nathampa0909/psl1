@@ -1,8 +1,9 @@
 body {
-	background: url("/img/background.jpg");
+	background: url("img/background.jpg");
 	font-family: Fradm, Tahoma;
 }
 
+/* Menu lateral e superior */
 .sidebar 	{
 	margin: 0;
 	padding: 0;
@@ -33,15 +34,16 @@ body {
 	transition: 0.3s;
 }
 
-div.content {
-	margin-left: 200px;
-	padding: 10px 16px;
-	filter:alpha(opacity=10);
-	opacity: 0.1;
-	-moz-opacity:0.1;
-	-webkit-opacity:0.1;
+.sidebar a.icon {
+	display: none;
 }
 
+/* Div do conteúdo */
+div.content {
+	background: #000;
+}
+
+/* Colocar estilo na barra de rolagem para navegadores que suportam este hook */
 ::-webkit-scrollbar {
 	width: 10px;
 }
@@ -58,26 +60,47 @@ div.content {
 	background: #e20f03;
 }
 
+/* Responsividade do menu */
 @media screen and (max-width: 700px) {
-	///* TODO: Colocar hamburguer bar fixa pra mostrar o menu */
+	.sidebar a:not(:first-child) {
+		display: none;
+	}
+
+	.sidebar a.icon {
+		float: right;
+		display: block;
+	}
+
 	.sidebar {
+		top: 0
+		margin: 0;
+		padding: 0;
+		left: 0;
 		width: 100%;
 		height: auto;
 		position: relative;
 	}
 
-	.sidebar a {
-		float: left;
+	.sidebar.responsive {
+		position: relative;
+	}
+
+	.sidebar.responsive a.icon {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+
+	.sidebar.responsive a {
+		float: none;
+		display: block;
+		text-align: left;
 	}
 
 	div.content {
 		margin-left: 0;
 	}
 
-	div.home {
-		display: none;
-		background: #000;
-	}
 }
 
 img {
