@@ -1,5 +1,5 @@
 body {
-	background: url("img/background.jpg");
+	background-image: url("img/background.jpg");
 	font-family: Fradm, Tahoma;
 }
 
@@ -72,20 +72,21 @@ div.content {
 	}
 
 	.sidebar {
-		top: 0
-		margin: 0;
-		padding: 0;
-		left: 0;
 		width: 100%;
 		height: auto;
-		position: relative;
+		position: fixed;
+	}
+
+	.sidebar a {
+		float: left;
+		padding: 15px;
 	}
 
 	.sidebar.responsive {
-		position: relative;
+		position: fixed;
 	}
 
-	.sidebar.responsive a.icon {
+	.sidebar a.icon {
 		position: absolute;
 		right: 0;
 		top: 0;
