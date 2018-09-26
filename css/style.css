@@ -1,12 +1,22 @@
+/* Deixar a body bonitinha com imagem no fundo */
 body {
-	background-image: url("img/background.jpg");
+	margin-top: -197px;
+	background-image: url('../img/background.jpg')!important;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
 	font-family: Fradm, Tahoma;
+}
+
+/* Declarar fonte diferente */
+@font-face {
+	font-family: Fradm;
+	src: url(fonts/FRADM.TTF);
 }
 
 /* Menu lateral e superior */
 .sidebar 	{
-	margin: 0;
-	padding: 0;
 	left: 0;
 	top: 0;
 	width: 200px;
@@ -16,6 +26,7 @@ body {
 	overflow: auto;
 }
 
+/* Formatar a tag a */
 .sidebar a {
 	display: block;
 	color: black;
@@ -23,24 +34,58 @@ body {
 	text-decoration: none;
 }
 
+/* Formatar quando estiver ativado */
 .sidebar a.active {
 	background-color: #fb1004;
 	color: white;
 }
 
+/* Fazer o efeito de hover quando passar o mouse nas opções não ativas */
 .sidebar a:hover:not(.active) {
 	background-color: #e20f03;
 	color: white;
 	transition: 0.3s;
 }
 
+/* Esconder o ícone quando iniciar a página no modo não responsivo */
 .sidebar a.icon {
 	display: none;
 }
 
 /* Div do conteúdo */
 div.content {
-	background: #000;
+	margin: 200px;
+  vertical-align: bottom;
+	position: absolute;
+	margin-left: 25%;
+	transform: translatedX(100%);
+	margin-top: 25%;
+	transform: translatedY(-70%);
+}
+
+/* Formatações do conteúdo home */
+div.chome hr {
+	color: white;
+	left: 200px;
+}
+
+div.cexperiencia {
+	display: none;
+}
+
+div.cformacao {
+	display: none;
+}
+
+div.chabilidades {
+	display: none;
+}
+
+/* Formatação de fonte */
+div.chome p {
+	font-size: 36px;
+	color: white;
+	font-family: Fradm, Tahoma;
 }
 
 /* Colocar estilo na barra de rolagem para navegadores que suportam este hook */
@@ -59,16 +104,16 @@ div.content {
 ::-webkit-scrollbar-thumb:hover {
 	background: #e20f03;
 }
+/* Fim do hook da barra de rolagem */
 
 /* Responsividade do menu */
-@media screen and (max-width: 700px) {
-	.sidebar a:not(:first-child) {
-		display: none;
+@media screen and (max-width: 1000px) {
+	body {
+		margin-top: 0;
 	}
 
-	.sidebar a.icon {
-		float: right;
-		display: block;
+	.sidebar a:not(:first-child) {
+		display: none;
 	}
 
 	.sidebar {
@@ -82,11 +127,9 @@ div.content {
 		padding: 15px;
 	}
 
-	.sidebar.responsive {
-		position: fixed;
-	}
-
 	.sidebar a.icon {
+		float: right;
+		display: block;
 		position: absolute;
 		right: 0;
 		top: 0;
@@ -101,7 +144,6 @@ div.content {
 	div.content {
 		margin-left: 0;
 	}
-
 }
 
 img {

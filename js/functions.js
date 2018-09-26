@@ -1,42 +1,50 @@
 $(document).ready(function() {
   $("#experiencia").click(function() {
-    //$("#conteudo").html("Este é o novo texto heehe!");
     removeAllActiveClasses();
+    removeAllFadeClasses();
     $("#experiencia").addClass("active");
+    $("#cexperiencia").fadeIn(1500);
   });
 
   $("#home").click(function() {
-    //$("#conteudo").html("Este é o novo texto heehe!");
     removeAllActiveClasses();
+    removeAllFadeClasses();
     $("#home").addClass("active");
+    $("#chome").fadeIn(1500);
   });
 
   $("#formacao").click(function() {
-    //$("#conteudo").html("Este é o novo texto heehe!");
     removeAllActiveClasses();
     $("#formacao").addClass("active");
+    $("#formacao").fadeIn(1500);
   });
 
   $("#habilidades").click(function() {
-    //$("#conteudo").html("Este é o novo texto heehe!");
     removeAllActiveClasses();
     $("#habilidades").addClass("active");
+    $("#habilidades").fadeIn(1500);
   });
 });
 
 function removeAllActiveClasses() {
   var id = ['#experiencia', '#home', '#habilidades', '#formacao'];
   for(var i = 0; i < id.length; i++) {
-  console.log(i + " " + id[i]);
     $(id[i]).removeClass("active");
   }
 }
 
+function removeAllFadeClasses() {
+  var id = ['#cexperiencia', '#chome', '#chabilidades', '#cformacao'];
+  for(var i = 0; i < id.length; i++) {
+    $(id[i]).fadeOut("slow");
+  }
+}
+
 function changeClassBar() {
-    var x = document.getElementById("menu");
-    if (x.className === "sidebar") {
-        x.className += " responsive";
+    var element = document.getElementById("menu");
+    if (element.className === "sidebar") {
+        element.className += " responsive";
     } else {
-        x.className = "sidebar";
+        element.className = "sidebar";
     }
 }
