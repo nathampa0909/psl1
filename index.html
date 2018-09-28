@@ -9,42 +9,60 @@
 	<script src="js/functions.js"></script>
 </head>
 <body>
+	<!-- Menu lateral e superior (responsividade)  -->
 	<div class="sidebar" id="menu">
-		<a href="#" id="home" class="active">HOME</a>
-		<a href="#" id="experiencia">EXPERIÊNCIA PROFISSIONAL</a>
-		<a href="#" id="formacao">FORMAÇÃO ACADÊMICA</a>
-		<a href="#" id="habilidades">HABILIDADES E COMPETÊNCIAS</a>
+		<a href="#" id="home" class="active" onclick="changeClassBar()">HOME</a>
+		<a href="#" id="experiencia" onclick="changeClassBar()">EXPERIÊNCIA PROFISSIONAL</a>
+		<a href="#" id="formacao" onclick="changeClassBar()">FORMAÇÃO ACADÊMICA</a>
+		<a href="#" id="habilidades" onclick="changeClassBar()">HABILIDADES E COMPETÊNCIAS</a>
 		<a href="javascript:void(0);" class="icon" onclick="changeClassBar()">
 			<img src="img/menu.png">
 		</a>
 	</div>
+
+	<!-- Div do conteúdo, fica do lado e em baixo (responsividade) -->
 	<div class="content" id="conteudo">
+
+		<!-- Div da página principal -->
 		<div id="chome" class="chome">
+			<img align="right" max-height="20%" width="20%" src="img/perfil.jpg">
 			<p>Nathan Guedes de Lacerda</p>
-			<hr width="50%">
-			<p>Seja bem vindo! Aqui você saberá um pouco sobre mim!
-			</div>
+			<hr align="left" width="10%">
+			<p>Seja bem vindo ao meu currículo! Aqui você saberá um pouco sobre mim!</p>
+			<p>Apresentarei minha experiência, formação, habilidades e competências.</p>
 		</div>
 
 		<div id="cexperiencia" class="cexperiencia">
-			<p>Nathan Guedes de Lacerda</p>
+			<p align="center">Experiência Profissional</p>
 			<hr width="10%">
-			<p>Seja bem vindo! Aqui você saberá um pouco sobre mim!
+			<div id="cexperienciain" class="cexperienciain">
+			<img align="center" max-height="30%" width="30%" src="img/virtushost.png">
+				<p>VirtusHost - Canoas, RS - Janeiro de 2015 a Maio de 2015.</p>
+				<p>Atender a solicitações de clientes, ajudar a resolver possíveis problemas do produto contratado (Serviço online), além do primeiro contato do cliente com a empresa através de chat online.</p>
 			</div>
+			<hr width="40%">
 		</div>
 
 		<div id="cformacao" class="cformacao">
-			<p>Nathan Guedes de Lacerda</p>
+			<p align="center">Formação Acadêmica</p>
 			<hr width="10%">
-			<p>Seja bem vindo! Aqui você saberá um pouco sobre mim!
+			<div id="cformacaoin" class="cformacaoin">
+				<img align="left"  max-height="10%" width="10%" src="img/ufg.png">
+				<p> Universidade Federal de Goiás - Goiânia, GO.
+					<br>Cursando desde</p>
+				</div>
+				<hr width="40%">
 			</div>
 		</div>
 
-		<div id="c" class="chome">
+		<div id="chabilidades" class="chabilidades">
 			<p>Nathan Guedes de Lacerda</p>
 			<hr width="10%">
 			<p>Seja bem vindo! Aqui você saberá um pouco sobre mim!
 			</div>
+
 		</div>
+	</div>
+</div>
 </body>
 </html>

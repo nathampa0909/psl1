@@ -26,7 +26,7 @@ body {
 	overflow: auto;
 }
 
-/* Formatar a tag a */
+/* Formatar as opções do menu */
 .sidebar a {
 	display: block;
 	color: black;
@@ -34,7 +34,7 @@ body {
 	text-decoration: none;
 }
 
-/* Formatar quando estiver ativado */
+/* Trocar a cor da opção no menu quando estiver na página */
 .sidebar a.active {
 	background-color: #fb1004;
 	color: white;
@@ -47,7 +47,7 @@ body {
 	transition: 0.3s;
 }
 
-/* Esconder o ícone quando iniciar a página no modo não responsivo */
+/* Esconder o ícone quando não estiver no modo responsivo */
 .sidebar a.icon {
 	display: none;
 }
@@ -55,12 +55,24 @@ body {
 /* Div do conteúdo */
 div.content {
 	margin: 200px;
-  vertical-align: bottom;
+	min-width: 800px;
+	vertical-align: bottom;
 	position: absolute;
 	margin-left: 25%;
-	transform: translatedX(100%);
 	margin-top: 25%;
-	transform: translatedY(-70%);
+}
+
+div.chome {
+	font-size: 36px;
+	color: white;
+	font-family: Fradm, Tahoma;
+}
+
+/*  */
+div.chome img {
+	float: right;
+	top: 0;
+	margin-right: 0;
 }
 
 /* Formatações do conteúdo home */
@@ -69,23 +81,96 @@ div.chome hr {
 	left: 200px;
 }
 
-div.cexperiencia {
-	display: none;
-}
-
-div.cformacao {
-	display: none;
-}
-
-div.chabilidades {
-	display: none;
-}
-
-/* Formatação de fonte */
+/* Formatação de fonte do conteúdo da home */
 div.chome p {
 	font-size: 36px;
 	color: white;
 	font-family: Fradm, Tahoma;
+}
+
+div.cexperiencia {
+	display: none;
+	font-size: 36px;
+	color: white;
+	font-family: Fradm, Tahoma;
+}
+
+div.cexperienciain p {
+	font-size: 25px;
+	text-align: justify;
+}
+
+div.cformacao {
+	display: none;
+	font-size: 36px;
+	color: white;
+	font-family: Fradm, Tahoma;
+}
+
+div.cexperienciain {
+	font-size: 25px;
+	text-align: justify;
+}
+
+div.chabilidades {
+	display: none;
+	font-size: 36px;
+	color: white;
+	font-family: Fradm, Tahoma;
+}
+
+/* Responsividade do menu */
+@media screen and (max-width: 1070px) {
+
+	/* Como retirou o menu lateral, alterar a margem */
+	body {
+		margin-top: 0;
+	}
+
+	/* Deixar apenas o Home no menu responsivo */
+	.sidebar a:not(:first-child) {
+		display: none;
+	}
+
+	/* Fixar o menu em cima */
+	.sidebar {
+		width: 100%;
+		height: auto;
+		position: fixed;
+	}
+
+	/* Formatar as opções do menu */
+	.sidebar a {
+		float: left;
+		padding: 15px;
+	}
+
+	/* Formatar o ícone que abre o menu */
+	.sidebar a.icon {
+		float: right;
+		display: block;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+
+	/* Quando o menu estiver aberto alinhar as opções à esquerda */
+	.sidebar.responsive a {
+		float: none;
+		display: block;
+		text-align: left;
+	}
+
+	/* Devido a troca de posição do menu, é necessário mudar a margem */
+	div.content {
+		margin-left: 50px;
+	}
+}
+
+/* Responsividade básica para que as imagens sigam o tamanho da resolução da página */
+img {
+	max-width:100%;
+	height:auto;
 }
 
 /* Colocar estilo na barra de rolagem para navegadores que suportam este hook */
@@ -105,48 +190,3 @@ div.chome p {
 	background: #e20f03;
 }
 /* Fim do hook da barra de rolagem */
-
-/* Responsividade do menu */
-@media screen and (max-width: 1000px) {
-	body {
-		margin-top: 0;
-	}
-
-	.sidebar a:not(:first-child) {
-		display: none;
-	}
-
-	.sidebar {
-		width: 100%;
-		height: auto;
-		position: fixed;
-	}
-
-	.sidebar a {
-		float: left;
-		padding: 15px;
-	}
-
-	.sidebar a.icon {
-		float: right;
-		display: block;
-		position: absolute;
-		right: 0;
-		top: 0;
-	}
-
-	.sidebar.responsive a {
-		float: none;
-		display: block;
-		text-align: left;
-	}
-
-	div.content {
-		margin-left: 0;
-	}
-}
-
-img {
-	max-width:100%;
-	height:auto;
-}

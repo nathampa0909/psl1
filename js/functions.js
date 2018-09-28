@@ -15,14 +15,16 @@ $(document).ready(function() {
 
   $("#formacao").click(function() {
     removeAllActiveClasses();
+    removeAllFadeClasses();
     $("#formacao").addClass("active");
-    $("#formacao").fadeIn(1500);
+    $("#cformacao").fadeIn(1500);
   });
 
   $("#habilidades").click(function() {
     removeAllActiveClasses();
+    removeAllFadeClasses();
     $("#habilidades").addClass("active");
-    $("#habilidades").fadeIn(1500);
+    $("#chabilidades").fadeIn(1500);
   });
 });
 
@@ -41,10 +43,10 @@ function removeAllFadeClasses() {
 }
 
 function changeClassBar() {
-    var element = document.getElementById("menu");
-    if (element.className === "sidebar") {
-        element.className += " responsive";
-    } else {
-        element.className = "sidebar";
-    }
+  var element = document.getElementById("menu");
+  if (element.className === "sidebar") {
+    element.className += " responsive";
+  } else {
+    element.className = "sidebar";
+  }
 }
