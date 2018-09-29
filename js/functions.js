@@ -1,3 +1,4 @@
+// Funções auxiliares a troca de menu
 $(document).ready(function() {
   $("#experiencia").click(function() {
     removeAllActiveClasses();
@@ -28,6 +29,7 @@ $(document).ready(function() {
   });
 });
 
+// Remover todas as classes ativas do menu
 function removeAllActiveClasses() {
   var id = ['#experiencia', '#home', '#habilidades', '#formacao'];
   for(var i = 0; i < id.length; i++) {
@@ -35,6 +37,7 @@ function removeAllActiveClasses() {
   }
 }
 
+// Remover com fade todas as classes
 function removeAllFadeClasses() {
   var id = ['#cexperiencia', '#chome', '#chabilidades', '#cformacao'];
   for(var i = 0; i < id.length; i++) {
@@ -42,6 +45,7 @@ function removeAllFadeClasses() {
   }
 }
 
+// Alterar a classe da sidebar para modo responsivo
 function changeClassBar() {
   var element = document.getElementById("menu");
   if (element.className === "sidebar") {

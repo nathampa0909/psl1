@@ -52,7 +52,7 @@ body {
 	display: none;
 }
 
-/* Div do conteúdo */
+/* Div referente à todo o conteúdo das páginas */
 div.content {
 	margin: 250px;
 	min-width: 800px;
@@ -62,26 +62,24 @@ div.content {
 	margin-top: 25%;
 }
 
+/* Início das divs das páginas */
 div.chome {
 	font-size: 36px;
 	color: white;
 	font-family: Fradm, Tahoma;
 }
 
-/*  */
 div.chome img {
 	float: right;
 	top: 0;
 	margin-right: 0;
 }
 
-/* Formatações do conteúdo home */
 div.chome hr {
 	color: white;
 	left: 200px;
 }
 
-/* Formatação de fonte do conteúdo da home */
 div.chome p {
 	font-size: 36px;
 	color: white;
@@ -161,6 +159,7 @@ div.chabilidadesin3 {
 div.chabilidadesin3 img {
 	margin-right: 30px;
 }
+/* Fim das divs das páginas */
 
 /* Responsividade do menu */
 @media screen and (max-width: 1070px) {
